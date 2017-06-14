@@ -21,6 +21,20 @@
 x = int(raw_input("Please enter an integer: "))
 if x < 0:
     x = 0
+"""
+if (not skipkeys and ensure_ascii and
+        check_circular and allow_nan and
+        cls is None and indent is None and separators is None and
+        encoding == 'utf-8' and default is None and not sort_keys and not kw):
+        return _default_encoder.encode(obj)
+    if cls is None:
+        cls = JSONEncoder
+    return cls(
+        skipkeys=skipkeys, ensure_ascii=ensure_ascii,
+        check_circular=check_circular, allow_nan=allow_nan, indent=indent,
+        separators=separators, encoding=encoding, default=default,
+        sort_keys=sort_keys, **kw).encode(obj)
+"""    
     
 
 # >>> for    

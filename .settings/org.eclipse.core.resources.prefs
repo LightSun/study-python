@@ -1,6 +1,11 @@
 eclipse.preferences.version=1
 encoding//com/heaven7/python/advance/common_lib.py=UTF8
-encoding//com/heaven7/python/advance/json.py=UTF8
+encoding//com/heaven7/python/advance/http_post_test.py=UTF8
+encoding//com/heaven7/python/advance/http_server_test.py=UTF8
+encoding//com/heaven7/python/advance/http_test.py=UTF8
+encoding//com/heaven7/python/advance/https_test.py=UTF8
+encoding//com/heaven7/python/advance/json1.py=UTF8
+encoding//com/heaven7/python/advance/pickle1.py=UTF8
 encoding//com/heaven7/python/advance/request.py=UTF8
 encoding//com/heaven7/python/study/class.py=utf-8
 encoding//com/heaven7/python/study/class2.py=utf-8
