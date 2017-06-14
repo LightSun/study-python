@@ -5,14 +5,15 @@ class Properties(object):
         self.fileName = fileName  
         self.properties = {}  
   
-    def __getDict(self, strName, dictName, value):  
+    def __getDict(self, keyStr, dictName, value):  
   
-        if(strName.find('.') > 0):  
-            k = strName.split('.')[0]  
+        if(keyStr.find('.') > 0):  
+            k = keyStr.split('.')[0]  
             dictName.setdefault(k, {})  
-            return self.__getDict(strName[len(k) + 1:], dictName[k], value)  
+            # keyStr 除开 k 以外的字符串递归
+            return self.__getDict(keyStr[len(k) + 1:], dictName[k], value)  
         else:  
-            dictName[strName] = value  
+            dictName[keyStr] = value  
             return  
     def getProperties(self):  
         try:  
@@ -33,7 +34,7 @@ class Properties(object):
             raise e  # raise 引发一个异常
         else:  
             pro_file.close()  
-        return self.properties  
+        return self.properties
 
     
     

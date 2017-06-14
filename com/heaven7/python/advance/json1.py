@@ -1,5 +1,11 @@
 # coding:UTF8
 
+"""
+首先说明基本功能：
+dumps是将dict转化成str格式，loads是将str转化成dict格式。
+dump和load也是类似的功能，只是与文件操作结合起来了。
+"""
+
 import json
 print json.__file__  # E:\study\python\lib\json\__init__.pyc
 

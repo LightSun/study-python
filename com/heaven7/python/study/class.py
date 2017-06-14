@@ -1,5 +1,7 @@
 #coding:utf-8
+
 # 例：类定义及使用
+#self 代表this对象
 class CAnimal:
     name = 'unname' # 成员变量 
     def __init__(self,voice='hello'):    # 重载构造函数
