@@ -32,3 +32,5 @@ class CDog(CAnimal):
 dog = CDog("12345");
 dog.SetVoice(0.55)
 dog.Say();
+
+print dog  # <__main__.CDog instance at 0x038B9378>
