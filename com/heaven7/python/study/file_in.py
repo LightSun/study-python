@@ -1,6 +1,8 @@
 #coding:utf-8
 
 ## 读取文件
+# 文件操作的api说明： http://www.open-open.com/lib/view/open1413527388231.html
+
 from sys import argv
 
 script, filename = argv
