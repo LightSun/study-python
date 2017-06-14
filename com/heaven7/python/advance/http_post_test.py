@@ -20,6 +20,7 @@ print result
 body_value  = json.JSONEncoder().encode(body_value)
 request = urllib2.Request(url, body_value)
 result = urllib2.urlopen(request ).read()
-print result
+print  "body: %s"% body_value
+#print result
 
 #httplib.HTTPSConnection
