@@ -17,6 +17,8 @@ d = {
  'Lisa': 38,
  'Bart': 59
  }
+# 按照 字典 d 的value降序排序
 d2 = sorted(d.iteritems(), key = operator.itemgetter(1), 
                             reverse= True); # 降序排序
-print d2                            
+print d2    # 仍然是一个字典               
+print d2[0][0]         
