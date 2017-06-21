@@ -34,6 +34,7 @@ if (not skipkeys and ensure_ascii and
         check_circular=check_circular, allow_nan=allow_nan, indent=indent,
         separators=separators, encoding=encoding, default=default,
         sort_keys=sort_keys, **kw).encode(obj)
+  判断是否为null ----- > if hold is not None:        
 """    
     
 

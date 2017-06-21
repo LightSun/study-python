@@ -8,3 +8,21 @@ a = numpy.array([[1,2,3],[4,5,6]])
 
 #shape属性，是一个(行，列)形式的元组
 print a.shape
+
+# 结果还是 2维数组，取行index 范围【0,2】， 所有的列
+print a[0:2,:]  # [[1 2 3]
+                #   [4 5 6]]
+
+# result 1维数组
+print a[1,:]  # [4 5 6]
+
+# result 2维数组。 行index >=1
+print a[1:,:] # [[4 5 6]]
+
+# result 1维数组. 取index = 1 的 列
+print a[:,1]  # [2 5]
+
+
+#result 2维数组, 取列index >=1的
+print a[:,1:]  #[[2 3]
+               #  [5 6]]
