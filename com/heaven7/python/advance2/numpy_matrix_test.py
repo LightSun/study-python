@@ -26,3 +26,8 @@ print a[:,1]  # [2 5]
 #result 2维数组, 取列index >=1的
 print a[:,1:]  #[[2 3]
                #  [5 6]]
+               
+a = numpy.array([1,2,3])
+print a[:1]  # 对于1维，【index:cout】  表示从哪个index开始(不写表示所有)， count表示个数
+print a[:2]
+print a[:0]

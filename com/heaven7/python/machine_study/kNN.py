@@ -4,6 +4,11 @@
 
 from numpy import *
 import operator
+
+import matplotlib
+import matplotlib.pyplot as plt;
+
+
 DEBUG = False;
 
 def createDataSet():
@@ -120,9 +125,6 @@ print "normalMat = %s, ranges = %s , minVals = %s" %(normalMat, ranges, minVals)
 
 # ======================== matplotlib显示 可视化数据 ===============================
 print "============= start >>> matplotlib显示 可视化数据  =================="
-
-import matplotlib
-import matplotlib.pyplot as plt;
 
 fig =  plt.figure();
 ax = fig.add_subplot(111);

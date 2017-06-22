@@ -1,0 +1,12 @@
+
+Python中的Numpy、SciPy、MatPlotLib安装与配置
+http://blog.csdn.net/walkandthink/article/details/45200597
+
+NumPy 学习
+http://blog.csdn.net/sunny2038/article/details/9002531
+
+matploblib 学习
+  http://www.cnblogs.com/vamei/archive/2013/01/30/2879700.html
+  
+  
+  
