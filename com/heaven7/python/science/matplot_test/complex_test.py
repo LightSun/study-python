@@ -37,7 +37,7 @@ z    = y **2 + x **2;
 
 plt.subplot(235)
 plt.contour(x, y ,z)  # 周线
-plt.colorbar()
+plt.colorbar()        # 右侧条形栏
 plt.title("contour")
 
 
