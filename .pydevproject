@@ -4,10 +4,9 @@
 <path>/${PROJECT_DIR_NAME}</path>
 <path>/${PROJECT_DIR_NAME}/com/heaven7/python/advance</path>
 <path>/${PROJECT_DIR_NAME}/com/heaven7/python/machine.baselib</path>
+<path>/${PROJECT_DIR_NAME}/com/heaven7/python/summary</path>
 </pydev_pathproperty>
 <pydev_property name="org.python.pydev.PYTHON_PROJECT_VERSION">python 2.7</pydev_property>
 <pydev_property name="org.python.pydev.PYTHON_PROJECT_INTERPRETER">Default</pydev_property>
-<pydev_pathproperty name="org.python.pydev.PROJECT_EXTERNAL_SOURCE_PATH">
-<path>E:\study\github\repositories\python_study\com\heaven7\python\machine.baselib</path>
-</pydev_pathproperty>
+
 </pydev_project>

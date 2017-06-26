@@ -1,6 +1,6 @@
 # coding:utf-8
 
-# 测试决策树相关： 香农熵
+# 测试决策树相关： 香农熵. ID3算法 
 import CA 
 import numpy
 
@@ -64,4 +64,20 @@ print CA.getTreeDepth(myTree)
 
 myTree['no surfacing'][3] ='maybe' #增加了映射  --- 3: 'maybe' ----
 print "myTree = ", myTree
-CA.createPlot(myTree);
+# CA.createPlot(myTree);  # OK , just for next.
+
+
+### ======================= start 决策树分类函数 ==================================
+print "================= >>> start 决策树分类函数 =================="
+dataSet, labels = createDataSet();
+print CA.classify(myTree, labels, [1,0],True);
+# print CA.classify(myTree, labels, [1,1]);
+
+### ======================= start 决策树的序列化和反序列化 ==================================
+print "================= >>> start 决策树的序列化和反序列化 =================="
+filename = 'classifierStorage.txt';
+CA.storeTree(myTree, filename);
+print CA.grabTree(filename)
+
+
+

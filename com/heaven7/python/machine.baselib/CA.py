@@ -6,6 +6,7 @@ import operator
 # plot 绘图
 import matplotlib 
 import matplotlib.pyplot as plt;
+import common_utils as ut;
 
 matplotlib.rcParams['font.sans-serif']=['SimHei'] #用来正常显示中文标签  
 matplotlib.rcParams['axes.unicode_minus']=False   #用来正常显示负号  
@@ -278,3 +279,45 @@ def getTreeDepth(myTree):
         if thisDepth > maxDepth: 
             maxDepth = thisDepth
     return maxDepth 
+
+def classify(inputTree , featLabels, testVec, debug = False):
+    '''''
+     获取决策树分类标签。
+   inputTree: 决策树
+   testVec:   需要测试的分类标签key的list
+   featLabels: 所有的标签.list
+    '''
+    firstStr = inputTree.keys()[0]; # 获取第一个key-value 的key
+    secondDict = inputTree[firstStr];
+    featIndex = featLabels.index(firstStr);
+    
+    if(debug):
+        print "firstStr = %s , featIndex = %s, secondDict = %s, secondDict.keys()= %s " % \
+                 (firstStr, featIndex, secondDict, secondDict.keys());
+    
+    # 遍历树，如果是叶子节点则返回分类标签，否则递归(判断节点 , 也是dict)
+    for key in secondDict.keys():
+        if testVec[featIndex] == key: # 相当于java的 list.get(index)
+            if(ut.isDict(secondDict[key])):
+                if(debug):
+                    print "start: 开始递归. key = %s, secondDict[key]= %s" % (key, secondDict[key])
+                classLabel = classify(secondDict[key], featLabels, testVec, debug);
+            else:
+                if(debug):
+                    print "已经获得分类标签 = %s, key = %s " % (secondDict[key], key)
+                classLabel = secondDict[key];
+    return classLabel; 
+
+def storeTree(inputTree, filename):
+    '''''
+    存储决策树到硬盘.利用python模块pickle序列化对象
+    '''
+    ut.writeObject(inputTree, filename);
+               
+def grabTree(filename):
+    '''''
+    从硬盘获取决策树，利用python模块pickle反序列化对象
+    '''
+    return ut.readObject(filename);
+
+
