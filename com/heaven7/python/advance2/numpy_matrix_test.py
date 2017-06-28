@@ -6,6 +6,8 @@
 import numpy
 a = numpy.array([[1,2,3],[4,5,6]])
 
+print "a = %s" %a 
+
 #shape属性，是一个(行，列)形式的元组
 print a.shape
 

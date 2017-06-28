@@ -7,7 +7,7 @@ def isDict(value):
     '''''
     返回是否是字典(dict).
     '''
-    return type(value).__name__=='dict'
+    return type(value).__name__=='dict' # # type(str1).__name__ = str
 
 def writeObject(obj, filename):
     '''''
