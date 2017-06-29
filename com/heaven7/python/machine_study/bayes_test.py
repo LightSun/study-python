@@ -4,10 +4,13 @@
 
 import numpy as np;
 import bayes_lib as bys;
-import log_lib as log;
+import log_lib as logg;
 from bayes_lib import textParse, createVocabList, bagOfWords2VecMN, trainNB2,\
     classifyNB
 from numpy import random
+import numpy.core.umath as math
+
+print math.log(1/25.0)
 
 def loadDataSet():
     # 生成 6组 array组成的2维数组
@@ -21,8 +24,8 @@ def loadDataSet():
     classVec = [0, 1, 0, 1, 0, 1]  # 1 is abusive, 0 not
     return postingList, classVec
 
-log1 = log.Logger("bayes_test");
-log1.setLogLevel(log.LEVEL_DEBUG, True);
+log1 = logg.Logger("bayes_test");
+log1.setLogLevel(logg.LEVEL_DEBUG, True);
 
 postList, classVec = loadDataSet();
 myVocabList = bys.createVocabList(postList);
@@ -66,6 +69,7 @@ def testingNB():
     
     log1.logTMS("testingNB", "trainMat = %s,\n np.array(trainMat) = %s " % (trainMat, np.array(trainMat)));            
     p0V, p1V, pAb = bys.trainNB2(np.array(trainMat), np.array(listClasses))
+    log1.logTMS("testingNB", "pAb = %s ,\n p0V = %s ,\n p1V = %s " % (pAb, p0V, p1V));
     
     testEntry = ['love', 'my', 'dalmation']
     thisDoc = np.array(bys.setOfWords2Vector(myVocabList, testEntry))

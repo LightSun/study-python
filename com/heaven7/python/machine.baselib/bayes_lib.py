@@ -7,7 +7,7 @@
 """
 
 from numpy import *
-import log_lib as logg;
+import log_lib as logg
 
 def createVocabList(dataSet):
     '''''
@@ -30,7 +30,8 @@ def setOfWords2Vector(vocabList, inputSet):
         inputSet  文档. 1维矩阵/数组
     '''
     returnVec = [0] * len(vocabList); # 创建和词汇表等长的向量(相当于 1维数组).
-    # print "returnVec =  %s" % returnVec
+    print "returnVec.type =  %s" % type(returnVec).__name__
+    
     
     for word in inputSet:
         if word in vocabList:
@@ -83,6 +84,8 @@ def trainNB0(trainMatrix, trainCategory, lg = logg.EMPTY_LOG):
             p0Denom += sum(trainMatrix[i]);
     p1Vect = p1Num/p1Denom;  # 矩阵所有元素除以该元素
     p0Vect = p0Num/p0Denom; 
+    lg.logTMS("trainNB0", "p0Denom = %s ,p1Denom = %s , \n p0Num = %s, \n p1Num = %s \n" % \
+              (p0Denom, p1Denom,  p0Num, p1Num));
     # lg.logTMS("trainNB0", "at last >>> p1Vect(侮辱) = %s, p0Vect = %s " % (p1Vect, p0Vect));
     return p0Vect, p1Vect, pAbusive;
 
@@ -124,6 +127,8 @@ def classifyNB(vec2Classify , p0Vec, p1Vec, pClass1):
     vec2Classify  需要分类的向量
     p0Vec, p1Vec, pClass1:  使用trainNB 计算得到的概率
     """
+    print "需要分类的向量 vec2Classify.len = %s, p0Vec.len = %s ,p1Vec.len = %s" % \
+             (len(vec2Classify), len(p0Vec), len(p1Vec)) 
     p1 = sum(vec2Classify * p1Vec) + log(pClass1); # 矩阵/向量对应元素 相乘
     p0 = sum(vec2Classify * p0Vec) + log(1 - pClass1);
     if( p1 > p0):

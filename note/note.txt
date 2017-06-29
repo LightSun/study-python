@@ -9,6 +9,8 @@ matploblib 学习
   http://www.cnblogs.com/vamei/archive/2013/01/30/2879700.html  深入理解原理
   http://blog.csdn.net/matrix_laboratory/article/details/50698239 高级 
   
+python其他库。feedparser  
+  
 
   
   
