@@ -21,7 +21,7 @@ def gradAscent(dataMatIn, classLabels, debug=log.EMPTY_LOG):
     debug.logTMS("gradAscent-梯度上升", "数据集%s行%s列" % (m,n));
     alpha = 0.001;  # 向目标移动的步长
     maxCycles = 500; #迭代次数
-    weights = ones((n,1)); # n行1列
+    weights = ones((n,1)); # n行1列.ndarray
     
     debug.logTMS("gradAscent-梯度上升", "weights = %s " % (weights));
     
