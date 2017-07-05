@@ -3,6 +3,9 @@
 # 封装一些常用的工具
 
 
+def typeName(value):
+    return type(value).__name__;
+
 def isDict(value):
     '''''
     返回是否是字典(dict).

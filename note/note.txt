@@ -14,4 +14,5 @@ python其他库。feedparser
 
   
   
-  
+upload android project to bintray  
+https://github.com/venshine/gradle-bintray-upload
