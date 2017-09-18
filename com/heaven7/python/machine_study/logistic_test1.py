@@ -11,6 +11,7 @@ log1 = log.Logger("logistic_回归测试");
 log1.setLogLevel(log.LEVEL_DEBUG, True);
 
 def loadDataSet():
+    # dataMat 已知数据集 (n行3列)，  labelMat 标签列表。
     dataMat = []; labelMat = []
     fr = open('testSet.txt')
     # 每行： x1,x2, 类别标签.
@@ -56,5 +57,14 @@ log1.logTS("result = %s" % result);
 print typeName(result)
 print result.getA()  # 从matrix -> ndarray
 # 图形化
-plotBestFit(result.getA());
+# plotBestFit(result.getA()); # ok
+
+#weights = llogistic.stocGradAscent0(array(dataMat), labelMat, debug=log1);
+weights = llogistic.stocGradAscent1(array(dataMat), labelMat, debug=log1);
+plotBestFit(weights)
+
+
+
+
+
 

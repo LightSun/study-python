@@ -51,6 +51,7 @@ x2 = mat(x2).transpose()
 print "x2 = %s " % (x2)
 print "x1 = %s " % (x1)
 print "x1 * x2 = %s " % (x1 * x2);
-# 6,15,24,33
+# 6,15,24,33 
+# print (x2.T.multiply(x1)).sum(axis=1) # error
 
 
