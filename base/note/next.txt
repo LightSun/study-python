@@ -1,0 +1,6 @@
+
+numpy meshgrid
+http://blog.csdn.net/baoqian1993/article/details/52116164
+
+matploblib 学习
+  http://www.cnblogs.com/vamei/archive/2013/01/30/2879700.html
