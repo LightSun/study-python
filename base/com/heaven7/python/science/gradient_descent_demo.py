@@ -29,7 +29,7 @@ alpha = 0.01
 def error_function(theta, X, y):
     '''Error function J definition.代价函数（损失函数）'''
     diff = np.dot(X, theta) - y
-    return (1./2*m) * np.dot(np.transpose(diff), diff)
+    return (1./2/m) * np.dot(np.transpose(diff), diff)
 
 def gradient_function(theta, X, y):
     '''Gradient of the function J definition.'''
